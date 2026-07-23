@@ -34,6 +34,11 @@ export const demoGenerate = inngest.createFunction(
       return await generateText({
         model: openrouter("openrouter/free"),
         prompt: finalPrompt,
+        telemetry: {
+          isEnabled: true,
+          recordInputs: true,
+          recordOutputs: true,
+        },
       });
     });
   },

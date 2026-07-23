@@ -9,6 +9,11 @@ export async function POST() {
   const response = await generateText({
     model: openrouter("openrouter/free"),
     prompt: "Write a chicken tikka masala recipe for 4 people",
+    telemetry: {
+      isEnabled: true,
+      recordInputs: true,
+      recordOutputs: true,
+    },
   });
 
   return Response.json({ response });

@@ -3,7 +3,6 @@
 import { ClerkProvider, useAuth, UserButton } from "@clerk/nextjs";
 import {
   Authenticated,
-  AuthLoading,
   ConvexReactClient,
   Unauthenticated,
 } from "convex/react";
